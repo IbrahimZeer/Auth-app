@@ -60,4 +60,14 @@ it's route is `http://localhost:3000/auth/login` , for now it only has a Title
 - form-err (to get Error message if something went wrong)
 ### schemas
 - index.ts (to use zod lib , help us to create Schemas like create message)
+### Create actions Directory
+- login.ts (to handle Login process , for now to validate Fields)
+- register.ts (to handle Register process , for now to validate Fields)
+### Adding register page inside app/auth
+it same as what login page do 
 
+### adding register-form inside components/auth
+it same as what login page do 
+
+---
+Update on Schemas Directory to be have register  
