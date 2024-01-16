@@ -69,5 +69,24 @@ it same as what login page do
 ### adding register-form inside components/auth
 it same as what login page do 
 
+
+***Update on Schemas Directory to be have register***
+
 ---
-Update on Schemas Directory to be have register  
+
+## Use Database and Prisma setup
+**Note : The Neon website is used to host my Database , using postgresQl**
+
+- `npx prisma init` (to setup prisma will create prisma Directory and .env file)
+- inside .env file putting Database details needed to run
+- inside prisma Directory , schema.prisma file putting Database details needed to run and write tables we need (entities)
+- `npx prisma generate` (to generate our prisma directory with neon host)
+- `npx prisma push` (to push our tables to Database host)
+- inside `action/register`
+  - Define data needed to register (name , email , password)
+  - hashing password using `bcrypt` library
+  - check email is exist or not
+  - create user in database if not
+- create `data` directory , user.ts file
+  - check if user already exist using Email
+  - check if user already exist using ID
