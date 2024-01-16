@@ -90,3 +90,16 @@ it same as what login page do
 - create `data` directory , user.ts file
   - check if user already exist using Email
   - check if user already exist using ID
+
+---
+
+## Middleware & Login
+**Note:** ***this Section is Server Side***
+
+- create `routes.ts` file (to write API to help me inside middleware file)
+- create `auth` to start use middleware
+  - URL used [Auth.js](https://authjs.dev/guides/upgrade-to-v5?authentication-method=middleware)
+- create `auth.config` to help `auth` file , inside file there details to understand
+- create `middleware` file to manage routes and handle how Application will work
+- create inside `app` , `(protected)/settings` Directory and `page` file (this file to create setting page , it will open after user signIn for now)
+
