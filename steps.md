@@ -103,3 +103,13 @@ it same as what login page do
 - create `middleware` file to manage routes and handle how Application will work
 - create inside `app` , `(protected)/settings` Directory and `page` file (this file to create setting page , it will open after user signIn for now)
 
+---
+
+## Callbacks
+
+- inside `auth` file we add Callback into NextAuth
+  - async session
+  - async JWT
+  - async signIn (for later)
+- create new file it's name is `next-auth.d.ts` this file to use Role with another way because simple way didn't work 
+- inside `schema.prisma` added role with enum UserRole to add as Column inside DB

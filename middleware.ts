@@ -6,6 +6,7 @@ import {
     apitAuthPrefix,
     DEFAULT_LOGIN_REDIRECT
 } from '@/routes'
+import { getUserById } from "./data/user"
 
 
 export const { auth } = NextAuth(authConfig)
