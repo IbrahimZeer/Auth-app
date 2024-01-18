@@ -113,3 +113,40 @@ it same as what login page do
   - async signIn (for later)
 - create new file it's name is `next-auth.d.ts` this file to use Role with another way because simple way didn't work 
 - inside `schema.prisma` added role with enum UserRole to add as Column inside DB
+
+---
+
+## SignIn and Register using Github and Google
+
+- inside `auth.config` add Google and Github inside Providers
+- inside `auth` add pages inside NextAuth
+- inside `.env` added 
+  - GITHUB_CLIENT_ID (i take this ID form Github -> settings -> Developers settings -> OAuth -> new OAuth App)
+    - add Application Name
+    - Homepage URL (in my case it is http://localhost:3000/)
+    - Authorization callback URL (in my case i take it from http://localhost:3000/api/auth/providers )
+      - then copy callbackUrl of github
+    - after this we will get Client ID 
+  - GITHUB_CLIENT_SECRET
+    - after we do last step we can press on generate Secret
+  - Google_CLIENT_ID ([FromThisLink](https://console.cloud.google.com/))
+    - select a project
+    - new project 
+    - project name -> create -> API's and Services -> OAuth -> External
+      - app name 
+      - your email
+      - logo (optional)
+      - Developer contact info
+    -  API's and Services -> Credentials
+       -  replace data as we do with Github 
+  - Google_CLIENT_SECRET
+- inside `social` add onClick function to use it with
+  - provider then use DEFAULT_LOGIN_REDIRECT form `routes` file
+  - with Button of Google and Github with assigned google for Google , github for Github buttons
+- Create error-card to Design error message
+- Create error page to Display error message
+- inside `Login-form` 
+  - import useSearchParams
+  - get error and use condition Logic to handle the Error
+  - add error message i handled to FormError message
+- inside `routes.ts` add error path to the authRoutes
