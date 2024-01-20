@@ -150,3 +150,18 @@ it same as what login page do
   - get error and use condition Logic to handle the Error
   - add error message i handled to FormError message
 - inside `routes.ts` add error path to the authRoutes
+
+---
+
+## Send Email
+Using [this link](https://resend.com/) i create the sender mail
+
+- download resend `npm i resend`
+- Create model inside `schema.prisma` it's name is VerificationToken
+- Create `tokens.ts` inside `lib` Directory to generate Verification Token
+- Create `mail.ts` inside `lib` Directory to handle email will send
+- create `verification-token.ts` inside `data` Directory to take token and check if email already has a token
+- inside `login-form` add `success` to `setSuccess`
+- inside `auth` add signIn callback to check if email already exists or verified or not 
+- inside `action/register` add send email verification also inside `action/login`
+- add Resend api key inside `.env` file
