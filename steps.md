@@ -170,14 +170,15 @@ Using [this link](https://resend.com/) i create the sender mail
 
 ## Email Verification
 **Note: after sending email we need to confirm the verification to verify and join setting page**
-- inside `routes.ts` add verification route for publicRoutes
+- Inside `routes.ts` add verification route for publicRoutes
 - Create `new-verification` directory and `page.tsx` file inside `app/auth` to render the new Verification form 
 - Create `new-verification-form` inside `components/auth` then
-  - use useSearchParams to search for the token that appended `mail.ts`
-  - design the form
+  - Install `npm i react-spinners` to add loading Design
+  - Use useSearchParams to search for the token that appended `mail.ts`
+  - Design the form
 - Create `new-verification` indie `actions` 
-  - check if existing token
-  - check if token are expired or not
-  - check if existing user
-  - update user table
-  - delete user table , no need to store it after verify
+  - Check if existing token
+  - Check if token are expired or not
+  - Check if existing user
+  - Update user table
+  - Delete user table , no need to store it after verify
