@@ -165,3 +165,19 @@ Using [this link](https://resend.com/) i create the sender mail
 - inside `auth` add signIn callback to check if email already exists or verified or not 
 - inside `action/register` add send email verification also inside `action/login`
 - add Resend api key inside `.env` file
+
+---
+
+## Email Verification
+**Note: after sending email we need to confirm the verification to verify and join setting page**
+- inside `routes.ts` add verification route for publicRoutes
+- Create `new-verification` directory and `page.tsx` file inside `app/auth` to render the new Verification form 
+- Create `new-verification-form` inside `components/auth` then
+  - use useSearchParams to search for the token that appended `mail.ts`
+  - design the form
+- Create `new-verification` indie `actions` 
+  - check if existing token
+  - check if token are expired or not
+  - check if existing user
+  - update user table
+  - delete user table , no need to store it after verify
