@@ -182,3 +182,7 @@ Using [this link](https://resend.com/) i create the sender mail
   - Check if existing user
   - Update user table
   - Delete user table , no need to store it after verify
+
+---
+
+## Reset password email
