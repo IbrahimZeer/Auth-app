@@ -186,3 +186,16 @@ Using [this link](https://resend.com/) i create the sender mail
 ---
 
 ## Reset password email
+**Note: Like send verification email**
+- Create `new-password` file inside `actions` directory
+- Create `reset` file inside `actions` directory 
+- Create `new-password/page.tsx` inside `app/auth`
+- Create `reset/page.tsx` inside `app/auth`
+- Create `new-password-form.tsx` inside `components/auth`
+- Create `reset-form.tsx` inside `components/auth`
+- Create `password-reset-token.ts` inside `data`
+- inside `lib/mail` added send email function
+- inside `lib/tokens` generate token to reset password
+- inside prisma/schema.prisma add PasswordResetToken model
+- inside `routes.ts` add `/auth/new-password` into authRoutes
+- inside `schemas/index.ts` create `NewPasswordSchema` function
